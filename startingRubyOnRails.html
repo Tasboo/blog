@@ -12,14 +12,14 @@
     </div>
     <div>
         <h2 id="top">Getting started with Ruby on Rails in Windows</h2>
-        <p>A few days ago, I came across a blog post by Scott Hansleman on <a
+        <p>A few days ago, I came across a blog post by <a href="https://twitter.com/shansleman">Scott Hansleman</a> on
+            <a
                 href="https://www.hanselman.com/blog/RubyOnRailsOnWindowsIsNotJustPossibleItsFabulousUsingWSL2AndVSCode.aspx">how
                 to get Ruby On Rails working in Windows</a>. In the post, Scott goes through several steps in how to get
             a Ruby on Rails environment setup on Windows, using the latest features that Windows has to offer. I decided
-            to follow along, but ran into some issues getting everything setup. These issues that can leave some people
-            frustrated. Being inspired by <a href="twitter.com/cassidoo">Cassidy Williams</a> to start putting my
-            experiences out for people to see, I decided to document my experience here in the hopes that someone out
-            there might be helped.
+            to give it a try, but I ran into some issues getting everything setup. I could see these issues causing some
+            people a lot of frustration. <a href="https://twitter.com/cassidoo">Cassidy Williams</a>
+            has been pretty inspiring in her posts especially when it comes to getting the motivation to write about your experiences, so I decided to give that a try as well.
         </p>
         <ul>
             <li><a href="#top">Top</a></li>
@@ -40,8 +40,10 @@
         <h3 id="assumptions">Assumptions, pre-reqs, and personal background</h3>
         <p>As with any how-to in the dev community, there are some pre-reqs and some assumptions in mine. They are:
             <ul>
-                <li>Have a computer.</li>
+                <li>Have access to a computer.</li>
                 <li>Have a valid copy of Windows 10 installed on said computer.</li>
+                <li>The ability to install Preview versions of Windows on that machine.</li>
+                <li>Administrator priveleges on that Windows install.</li>
                 <li>Have an internet connnection.</li>
                 <li>Some knowledge on how to use the command line in Windows/Linux.</li>
                 <li>Install <a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
@@ -62,8 +64,8 @@
                     <li>I have virtually no understanding of postgresql, though I have a lot of experience using MS SQL
                         Server and some knowledge of MySql and Sqlite.</a>
                 </ul>
-                <h3 id="windowsinsider">Windows Insiders</h3>
             </p>
+            <h3 id="windowsinsider">Windows Insiders</h3>
             <p>The first thing Scott mentions after his opening paragraph is to get a recent version of Windows. This
                 does not mean make sure you have Windows updated. As of the time of this writing, it means get a preview
                 version of Windows. The preview version of Windows has version 2 of the Windows Subsystem for Linux
@@ -77,8 +79,8 @@
                 was signed up, I needed to sign in to my computer with my Microsoft account, which I had never done
                 before. Easy enough.
             </p>
-            <p>Once you do that you are supposed to be able to go to the Windows Insider Program Settings in Windows and
-                download a preview version of Windows. On the Windows Insider Program Settings, I see a button that says
+            <p>Once you do that <a href=" https://insider.windows.com/en-us/welcome-back/">you are supposed to</a> be able to go to the Windows Insider Program Settings in Windows and
+                download a preview version of Windows. In the Windows Insider Program Settings, I see a button that says
                 'Get Started'.
             </p>
             <p>I could not get the 'Get Started' button to work. Everytime I clicked on it, I got one of two errors.
@@ -86,7 +88,6 @@
                 messages seem to be related to Windows Updates in general, so I go to the Windows Update settings in
                 Windows to see if that works. Sure enough, Windows Update works fine. My computer is completely up to
                 date.
-                https://insider.windows.com/en-us/welcome-back/
             </p>
             <p>After many attempts to get this button working, I threw in the towel. Turns out, you don't need to have
                 that working to get the preview edition of Windows installed. The ISOs are available to download in the
