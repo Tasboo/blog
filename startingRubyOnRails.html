@@ -1,0 +1,59 @@
+<html>
+<head>
+</head>
+<body>
+<p>A few days ago, I came across this blog post by Scott Hansleman on Ruby On Windows. In the post, Scott (who I admire greatly) goes through several steps in how to get a Ruby on Rails environment setup on Windows, using the latest features that Windows has to offer. I decided to follow along, but ran into some issues getting everything setup. Issues that are not well documented and can leave someone frustrated. Being inspired by cassido to start blogging, j decided to document my experience here in the hopes that someone out there might be helped.
+</p>
+<p>To start with, I'll give Some personal background on all of this. Feel free to skip this paragraph if you don't care about this personal story. I have tried to learn Ruby on Rails a few times in my life.  Twice on Windows, once on mac. All three times failures. The two times on Windows are because mainly the development environment on Windows is terrible. I failed on mac because developing on a macbook air is not a pleasant experience for myself and I wasn't very familiar with the mac OS environment. So when i saw this article by Scott, I decided to give it one more go.
+</p>
+<p>Windows Insider
+</p>
+<p>Writer's note: this section is a deep dive into getting into the Windows Insider program. If the features that I needed from the preview builds are now in the latest version of Windows, then feel free to skip this section.
+</p>
+<p>The first thing that I needed to do was to get the right version of Windows installed. Having the latest version of Windows is not enough (at least, at the time of this writing). I needed the bleeding edge, a preview version of windows. To get the preview edition, I would need to become a Windows Insider. Sounds pretty exclusive right? Well, its not. You just need a windows account (outlook.com, hotmail, or a work account). The sign up process was rather easy. 
+</p>
+<p>Once I was signed up, I needed to sign in to my computer with my Microsoft account, which I had never done before. (sign in instructions) Easy enough.
+</p>
+<p>Now I went to the Windows Insider Program Settings in Windows to get the latest Fast Track build, as described on the Windows Insiders website.
+https://insider.windows.com/en-us/welcome-back/
+</p>
+<p>Once you are in the Windows Insider Program Settings, there is a button you can click called 'Get Started'. This never worked for me, even after doing a work around. I kept on getting 2 different errors. I tried a variety of things to remedy the situation, including a repair install of Windows. Nothing worked. I kept on getting those same errors. 
+</p>
+<p>Eventually, I went the route of downloading the Insider Build ISO manually and installing it that way. That worked fine. Even after getting the Insider build of Windows installed, the Get Started button still gives me errors. I've decided to write off that functionality entirely because its just a headache and wasted time at this point.
+</p>
+<p>Once that was installed, I was able to get WSL2 up and running with Ubuntu 18.04. That was pretty painless.
+</p>
+<p>I installed the new Windows Terminal that Scott suggested, but it still feels a bit raw to me, particularly the settings configuration being all JSON based. That's not a knock on JSON or JSON based configuration, but having your settings all defined via JSON with virtually no guidance on what to do in that JSON means me investing time into something that I really don't need to do; using the Ubuntu LTS install on windows brings up a fine enough terminal window. No fuss, just works. Scott does have a guide on getting Windows Terminal all customized, but that seemed like a tangent that I did not want to go down. Maybe another day.
+</p>
+<p>At this point, I feel like I'm ready to get cooking: I can finally start installing Ruby on Rails 😁😁😁. Finally the moment had arrived. Scott's article links to this page on how to install Ruby on Rails on Ubuntu 18.04. I have to say, the instruction provided there are pretty spot on. I only had one issue, but that was only with the Postgresql portion of the instructions (detailed below). Getting Ruby on Rails installed wen't super well. It did take a while at one of the steps, which made me think I had done something wrong, since nothing was changing in the terminal window. I eventually just let it be and walked away for a while. Eventually I came back and it had done a bunch of things.
+https://gorails.com/setup/ubuntu/18.04
+</p>
+<p>The issue I ran into with the Postgresql was that I didn't install the necessary repositories to get the packages for installing Postgresql. The instructions on the install page for Ruby on Rails page did not detail how to do that, but another page I found did.
+https://tecadmin.net/install-postgresql-server-on-ubuntu/
+</p>
+<p>I only followed Step 1 on that page. After completing Step 1, I went back to the Ruby on Rails install steps. I was still getting issues trying to get the sudo apt isntall postgres-11 libpq-dev command to work.  Turns out I had to run sudo apt-get update in order for the installed repository to be registered or something like that. After I ran that, I ran into another issue with the Postgres install steps. The createuser command came back at me with the error message: createuser could not connect to database postgres no such file or directory.
+</p>
+<p>I tried 2 commands. First I tried this command, as specified in the output when I installed Postgresql: pg_ctcluster 11 main start.
+</p>
+<p>That returned the error "Error: You must runt his program as the cluster owner (postgres) or root". No idea what that meant, so I tried a different command. After some googling, I came across this command: sudo service postgresql start. After running that command, the createuser command worked fine.
+</p>
+<p>I was now at the point in the instructions that said to create a new rails app. The instructions have 3 commands: one for sqlite, one for mysql and one for postgresql. I used the postgresql command. This command took a few minutes to finish. Eventually it finished. The instructions at this point say to update the database config file to include the user/password info for the postgresql connection. I figured this would be a good time to test the WSL2 functionality. 
+</p>
+<p>After opening Visual Studio code on my Windows install, I installed the Remote- WSL extension. After that I clicked on this little green icon at the bottom of the VSCode window. Navigating through the provided options that popped up, I was able to select the Ubuntu-18.04 distro.
+</p>
+<p>Clicking the Ubuntu distro caused VSCode to open a new VSCode window. This new window seemed to be attempting to connect to the Ubuntu instance I had selected. Sure enough, after a few seconds, I was able to select the directory of the myapp that I had created.
+</p>
+<p>This is NICE. At this point I must say, I am getting pretty excited. For one, it actually worked. I was able to get this all working. Scotts post, like so many of his, are nice and approachable. The instructions on the gorails site were also pretty great (a couple minor hiccups, but somewhat easily resolvable). I've tried getting other dev environments setup and had far worse experiences. This was pretty great.
+</p>
+<p>I go back to Scotts post. He says, from the terminal window, I can run "explorer.exe ." to open an explorer window. Pay special attention to the period at the end of that command that comes AFTER explorer.exe. Without that period, it will just open an explorer window with its default starting location for your windows install. Took me a second to notice that period. Using the period, I was able to see my Ubuntu directory just fine.
+</p>
+<p>After getting past my glee, I remember that I have to update the config/databases.yml file in the myapp directory. I update the dev, test, and production databases in the yml file to have my user/password creds.
+</p>
+<p>At this point, i feel like I'm really really close to having everything setup. I go back to the gorails instructions and see that they need me to navigate to the myapp directory and run rake db:create. I do that and get the following output.  Seems like the dev and test DBs got created. Got a couple of warnings, but they don't seem like big deals to me at this point.
+</p>
+<p>Per Scott's suggestion I run the rails app using "rails server -b=0.0.0.0" which will allow me to navigate to the site using localhost:3000. Everything works, as advertised.
+</p>
+<p>At this point, I feel like I can really start my Ruby on Rails learning. I want to extend a huge thanks to Scott. Also to the people working on WSL and VSCode. This experience is pretty incredible. Well done.
+</p>
+</body>
+</html>
