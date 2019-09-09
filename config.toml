@@ -1,0 +1,4 @@
+baseURL = "https://www.grahamhuck.dev/"
+languageCode = "en-us"
+title = "Graham Huck"
+theme = "ananke"
