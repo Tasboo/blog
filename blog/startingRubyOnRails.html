@@ -87,21 +87,21 @@
             was signed up, I needed to sign in to my computer with my Microsoft account, which I had never done
             before. Easy enough.
         </p>
-        <img src="images/AccountSettings.png" />
+        <img src="/images/AccountSettings.png" />
         <p>Once you do that <a href=" https://insider.windows.com/en-us/welcome-back/" target="_blank">you are
                 supposed to</a> be able to go to the Windows Insider Program Settings in Windows and
             download a preview version of Windows. In the Windows Insider Program Settings, I see a button that says
             'Get Started'.
         </p>
-        <img src="images/WindowsInsidersInstructions.png" />
+        <img src="/images/WindowsInsidersInstructions.png" />
         <p>I could not get the 'Get Started' button to work. Everytime I clicked on it, I got one of two errors.
             Googling these errors, you get a wide variety of solutions and suggestions of things to try. These error
             messages seem to be related to Windows Updates in general, so I go to the Windows Update settings in
             Windows to see if that works. Sure enough, Windows Update works fine. My computer is completely up to
             date.
         </p>
-        <img src="images/Something went wrong.png" />
-        <img src="images/somethingwentwrong2.png" />
+        <img src="/images/Something went wrong.png" />
+        <img src="/images/somethingwentwrong2.png" />
         <p>After many attempts to get this button working, I threw in the towel. Turns out, you don't need to have
             that working to get the preview edition of Windows installed. The ISOs are available to download in the
             Windows Insiders site. So that's what I ended up doing and it was super simple.
@@ -114,7 +114,7 @@
             then click the setup.exe file. Follow the simple setup instructions and after a while the Windows
             preview edition will have finished installing.
         </p>
-        <img src="images/Windows10preivew.png" />
+        <img src="/images/Windows10preivew.png" />
         <h3 id="wsl2">Windows Subsystem for Linux v2 (WSL2)</h3>
         <p>Now that the newest preview edition of Windows was installed, I was able to get the Windows Subsystem
             for Linux up and running with Ubuntu 18.04. That was pretty painless. As Scott pointed to in his
@@ -179,7 +179,7 @@
             the command 'sudo service postgresql start'. After running that command, the createuser command
             worked fine.
         </p>
-        <img src="images/PostgresTerminalLog.png" />
+        <img src="/images/PostgresTerminalLog.png" />
         <h3 id="createrailsapp">Creating a New Rails App</h3>
         <p>I was now at the point in the instructions that said to create a new rails app. The instructions
             have 3 commands: one for sqlite, one for mysql, and one for postgresql. I used the postgresql
@@ -196,15 +196,15 @@
             the bottom-left of the VSCode window. Navigating through the provided options that popped up, I
             was able to select the Ubuntu-18.04 distro.
         </p>
-        <img src="images/WSLRemoteIcon.png" />
-        <img src="images/ExtensionRemoteOptions.png" />
-        <img src="images/ExtensionRemoteDistro.png" />
+        <img src="/images/WSLRemoteIcon.png" />
+        <img src="/images/ExtensionRemoteOptions.png" />
+        <img src="/images/ExtensionRemoteDistro.png" />
         <p>Clicking the Ubuntu distro caused VSCode to open a new VSCode window. This new window seemed to
             be attempting to connect to the Ubuntu instance I had selected. Sure enough, after a few
             seconds, I was able to select the directory of the myapp that I had created, just as if I was
             running that VSCode window on a Linux instance. That is pretty crazy.
         </p>
-        <img src="images/successmyapp.png" />
+        <img src="/images/successmyapp.png" />
         <h3 id="explorer">Explorer.exe and the WSL</h3>
         <p>Following all this I go back to Scotts post. He says, from the terminal window, I can run
             "explorer.exe ." to open an explorer window. Pay special attention to the space and period at
@@ -223,14 +223,14 @@
             dev and test DBs got created. Got a couple of warnings, but they don't seem like big deals to me
             at this point.
         </p>
-        <img src="images/postgresdbcreate.png" />
+        <img src="/images/postgresdbcreate.png" />
         <h3 id="runningrails">Running the Rails App</h3>
         <p>Per Scott's suggestion I run the rails app using 'rails server -b=0.0.0.0' which will allow me to
             navigate to the site using localhost:3000. I did this from the Ubuntu terminal. After running
             the command, everything worked. I could browse to http://localhost:3000 on my windows machine
             and see the website running!
         </p>
-        <img src="images/railsrun.png" />
+        <img src="/images/railsrun.png" />
         <h3 id="wrapup">Wrapping Up</h3>
         <p>At this point, I feel like I can really start my Ruby on Rails learning. I want to extend a huge
             thanks to the following:
