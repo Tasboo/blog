@@ -8,8 +8,8 @@ canonifyurls = true
 pygmentsstyle       = "bw"
 pygmentscodefences  = true
 
-dateform = "2019-09-09 23:59:59"
 
 [params]
   sitename = "Graham Huck"
   disableWebFonts = false
+  dateform = "2019-09-09 23:59:59"
