@@ -220,7 +220,7 @@ A few days ago, I came across a blog post by [Scott Hanselman](https://twitter.c
                 <li>To Cassidy Williams for motivating me to write about things.</li>
             </ul>
         </p>
-        <h3 id="wrapup">Next Steps</h3>
+        <h3 id="next">Next Steps</h3>
         <p>My next steps are not well thought out at the moment. Once I decide on what to do next, I'll
             document what I do as I do it and post about it here.
         </p>
