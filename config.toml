@@ -2,3 +2,12 @@ baseURL = "https://www.grahamhuck.dev/"
 languageCode = "en-us"
 title = "Graham Huck"
 theme = "black-and-light"
+author = "Graham Huck"
+canonifyurls = true
+
+pygmentsstyle       = "bw"
+pygmentscodefences  = true
+
+[params]
+  sitename = "Graham Huck"
+  disableWebFonts = false
