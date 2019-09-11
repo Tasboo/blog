@@ -1,5 +1,5 @@
 ---
-title: "Getting started with Ruby on Rails in Windows"
+title: "Getting Started With Ruby on Rails in Windows"
 date: "2019-09-09T07:13:19+01:00"
 draft: false
 ---
