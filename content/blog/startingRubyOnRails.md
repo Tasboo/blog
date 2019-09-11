@@ -1,11 +1,10 @@
-## Getting started with Ruby on Rails in Windows
+# Getting started with Ruby on Rails in Windows
 
 A few days ago, I came across a blog post by [Scott Hanselman](https://twitter.com/shanselman) on  [how to get Ruby On Rails working in Windows](https://www.hanselman.com/blog/RubyOnRailsOnWindowsIsNotJustPossibleItsFabulousUsingWSL2AndVSCode.aspx). In the post, Scott goes through several steps in how to get a Ruby on Rails environment setup on Windows, using the latest features that Windows has to offer. I decided to give it a try, but I ran into some issues getting everything setup. I could see these issues causing some people a lot of frustration. [Cassidy Williams](https://twitter.com/cassidoo) has been pretty inspiring in her posts especially when it comes to getting the motivation to write about your experiences, so I decided to give that a try as well.
 
-### Assumptions, pre-reqs, and personal background
 <div>
         <ul>
-            <li><a href="#top">Top</a></li>
+            <li><a href="#Getting-started-with-Ruby-on-Rails-in-Windows">Top</a></li>
             <li><a href="#assumptions">Assumptions, pre-reqs, and personal background</a></li>
             <li><a href="#windowsinsider">Windows Insider Program</a></li>
             <li><a href="#wsl2">Windows Subsystem for Linux v2 (WSL2)</a></li>

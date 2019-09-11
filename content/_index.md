@@ -1,1 +1,0 @@
-[Getting starting Ruby on Rails in Windows](/blog/startingRubyOnRails/)
