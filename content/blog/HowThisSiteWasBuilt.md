@@ -28,7 +28,7 @@ I do have a few things to add on all of this:
    2. Also good to have your whois info not point to your main personal email, IMO.
 2. Keep your domain registration and site hosting seperate.
    1. Sort of same reasoning as above. Basically the idiom of "don't keep all your eggs in one basket". Basically, diversify the pieces of your site (domain name, site hosting, code repo) so that if one or even two things go down, you still have pieces of the whole to build back up around.
-3. For getting the DNS setting setup in Google domains, I ended up using a CNAME. Netifly says to use an ANAME, but Google does not have that so the CNAME worked fine. Not sure if I needed both the A and CNAME types setup, but is what I ended up doing:
+3. For getting the DNS setting setup in Google domains, I ended up using a CNAME. Netifly says to use an ANAME, but Google does not have that so the CNAME worked fine. I'm not sure if I needed both the A and CNAME types setup, but it's what I ended up doing:
 ![CNAME settings.](/images/GoogleDNS.png)
 4. The build command I ended up using in the Netifly Continuous Deployment settings is "hugo --gc --minify".
 
