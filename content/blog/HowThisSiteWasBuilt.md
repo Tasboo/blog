@@ -11,6 +11,7 @@ I thought I'd share how I built this site because it was pretty painless. The sh
 Julia does a really great job of explaining a lot of things and in this post she really boils it all down to a nice easy How to on how to get a site up and running without having to use a blogging site like Medium.
 
 I followed everything pretty much to T. So to sum up what is running the site:
+
  - New [GitHub](https://github.com) repo
  - Created a site using [Hugo](https://gohugo.io/) 
  - Committed Hugo site to GitHub repo
@@ -21,6 +22,7 @@ I followed everything pretty much to T. So to sum up what is running the site:
  - I setup the DNS forwarding for my google domain to point to the netfily site.
 
 I do have a few things to add on all of this:
+
 1. Do not use your main gmail email (if you use gmail) to register your domain if you go through Google.
    1. If one gets suspended for whatever reason or even hacked, you could lose it all. It's always good to have backups.
    2. Also good to have your whois info not point to your main personal email, IMO.
