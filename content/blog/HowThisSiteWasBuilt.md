@@ -28,5 +28,6 @@ I do have a few things to add on all of this:
    1. Sort of same reasoning as above. Basically the idiom of "don't keep all your eggs in one basket". Basically, diversify the pieces of your site (domain name, site hosting, code repo) so that if one or even two things go down, you still have pieces of the whole to build back up around.
 3. For getting the DNS setting setup in Google domains, I ended up using a CNAME. Netifly says to use an ANAME, but Google does not have that so the CNAME worked fine. Not sure if I needed both the A and CNAME types setup, but is what I ended up doing:
 ![CNAME settings.](/images/GoogleDNS.png)
+4. The build command I ended up using in the Netifly Continuous Deployment settings is "hugo --gc --minify".
 
 And that's it. Pretty simple stuff. I did find that there was a learning curve for me getting the DNS settings setup right and also with getting the Hugo theme to work nicely, but nothing that was too bad.
