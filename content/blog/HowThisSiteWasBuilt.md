@@ -6,19 +6,19 @@ draft: false
 
 (This post may change over time if the stack around this site changes.)
 
-I thought I'd share how I built this site because it was pretty painless. The short of it is that I just followed what [Julia Evans](https://twitter.com/b0rk) said to do in her blog post on [How to put an HTML page on the internet](https://jvns.ca/blog/2019/09/06/how-to-put-an-html-page-on-the-internet/).
+I thought I'd share how I built this site because it was pretty painless. The short of it is that I just followed what <a href="https://twitter.com/b0rk" target="_blank">Julia Evans</a> said to do in her blog post on <a href="https://jvns.ca/blog/2019/09/06/how-to-put-an-html-page-on-the-internet/" target="_blank">How to put an HTML page on the internet</a>.
 
 Julia does a really great job of explaining a lot of things and in this post she really boils it all down to a nice easy How to on how to get a site up and running without having to use a blogging site like Medium.
 
 I followed everything pretty much to T. So to sum up what is running the site:
 
- - New [GitHub](https://github.com) repo
- - Created a site using [Hugo](https://gohugo.io/) 
+ - New <a href="https://github.com" target="_blank">GitHub</a> repo
+ - Created a site using <a href="https://gohugo.io/" target="_blank">Hugo</a> 
  - Committed Hugo site to GitHub repo
- - Created a [Netifly](https://www.netlify.com/) account
+ - Created a <a href="https://www.netlify.com/" target="_blank">Netifly</a> account
  - Netifly is configured to fetch content from my GitHub repo
  - I have a build command setup in Netifly to build the site
- - I created a domain through [Google domains](https://domains.google.com) (this part is not free).
+ - I created a domain through <a href="https://domains.google.com" target="_blank">Google domains</a> (this part is not free).
  - I setup the DNS forwarding for my google domain to point to the netfily site.
 
 I do have a few things to add on all of this:
