@@ -1,5 +1,5 @@
 ---
-title: "First Steps with Rails Development"
+title: "First Controller in Rails"
 date: "2019-09-20T07:02:00+01:00"
 draft: false
 ---
@@ -38,14 +38,15 @@ After running that command a few different things happen, the output tells me th
    1. Some default html is added to that file automatically telling how to find this file.
 3. The helper file 'helpers/home_helper.rb' gets added
    1. I have no idea what this does right now. The helper by default has no code other than declaring the module
-4. The 'config/routes.rb' file gets modified to include an entry to do a GET on home/index
+4. The 'config/routes.rb' file gets modified to include an entry to do a GET on home/index.
+   1. This new entry tells Rails what actions to take when a user navigates to the home/index URL.
 5. The test file 'test/controllers/home_controller_test.rb' gets created.
    1. I have no idea how to run tests in Rails yet, but I am glad this gets added automatically.
    2. Something to note, while there is a section for helpers within the test directory, a test class for the home_helper was not added.
 6. The scss file 'assets/stylesheets/home.scss' was created for styling the home controller view. 
    1. Nothing is in this file asside from a comment.
 
-So that command did a lot it seems, but I want to make sure that my app defaults to this new controller when I navigate to the root of the site. To do that, I add an entry in the routes.rb file so that it looks like this:
+So that command did a lot it seems. One thing I want to do in addition to all of this is to make sure that my app defaults to this new controller when I navigate to the root of the site. To do that, I add an entry in the routes.rb file so that it looks like this:
 
 ```
 Rails.application.routes.draw do
@@ -55,7 +56,7 @@ Rails.application.routes.draw do
 end
 ```
 
-This tells rails that if the root of the site is requested, execute the home controller with the index route/view. Without changing anything else, I run my site uisng 'rails server -b=0.0.0.0' and now see this:
+This tells rails that if the root of the site is requested, execute the home controller with the index action. Without changing anything else, I run my site uisng 'rails server -b=0.0.0.0' and now see this:
 
 ![Successful results](/images/NewHomeController.png)
 
@@ -64,7 +65,7 @@ Awesome! Not only do I see the new index view for my home displayed, I also see 
 I think this will be it for this post, but there are a few things I would like to look at next.
 
 1. How do I run tests? That new test file has me intrigued.
-2. How do I pass variables from my controller module down to the view I am trying to render?
+2. [How do I pass variables from my controller module down to the view I am trying to render?](/blog/NewControllerActionAndRoutes)
 3. What is with all the files in the config/initializers directory? I am curious to see what I can do with each one of those files.
 4. How do I start using my postgresql database that I created when I set all this up originally?
 
