@@ -33,3 +33,6 @@ I do have a few things to add on all of this:
 4. The build command I ended up using in the Netifly Continuous Deployment settings is "hugo --gc --minify".
 
 And that's it. Pretty simple stuff. I did find that there was a learning curve for me getting the DNS settings setup right and also with getting the Hugo theme to work nicely, but nothing that was too bad.
+
+
+

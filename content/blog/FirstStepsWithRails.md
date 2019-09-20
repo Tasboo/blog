@@ -6,12 +6,12 @@ draft: false
 
 After I got my [first rails app](/blog/RubyOnRailsInWindows) created, I wanted to do some learning on my own first. My first question was, "what in the world is this page and how do I edit it?":
 
-![CNAME settings.](/images/successmyapp.png)
+![My first rails app](/images/successmyapp.png)
 
 Turns out, you're not supposed to edit this page. It seems to be some sort of built in render within Rails that you can't edit yourself. It probably only gets displayed if you don't have a default route setup for your root. I tried editing views/applicaiton.html.erb, but nothing I changed there seemed to have an impact.
 
-![CNAME settings.](/images/ModifiedApplicationView.png)
-![CNAME settings.](/images/ModifiedApplicationViewResults.png)
+![Modified application view](/images/ModifiedApplicationView.png)
+![Failed results](/images/ModifiedApplicationViewResults.png)
 
 If you want to edit what gets displayed when you run your site, you need to add a controller and then set that controller to the root of your site. Editing the default application contoller or view doesn't have an impact on what is displayed until you have created a controller/view and setup your routes page.
 
@@ -21,7 +21,7 @@ To add a new controller, I ran the following:
 rails generate controller Home index
 ```
 
-Some explanation of what each of these commands seems to be doing:
+Some explanation of what each of this command seems to be doing:
 
 - rails = rails command
 - generate = tell rails to generate something
@@ -53,4 +53,16 @@ Rails.application.routes.draw do
 end
 ```
 
-This seems to tell rails that if the root of the site is requested, execute the home controller with the index route/view.
+This seems to tell rails that if the root of the site is requested, execute the home controller with the index route/view. Without changing anything else, I run my site uisng 'rails server -b=0.0.0.0' and now see this:
+
+![Successful results](/images/NewHomeController.png)
+
+Awesome! Not only do I see the new index view for my home displayed, I also see my modifications that I did to the application.html.erb view earlier. Looking at these results, it's very easy to compare ASP.NET MVC to Rails. Seeing the routes, controllers, and views feels very familiar to me.
+
+I think this will be it for this post, but there are a few things I would like to look at next.
+1. How do I run tests? That new test file has me intrigued.
+2. How do I pass variables from my controller module down to the view I am trying to render?
+3. What is with all the files in the config/initializers directory? I am curious to see what I can do with each one of those files.
+
+
+
