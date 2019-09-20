@@ -63,6 +63,7 @@ Within that view, I added the following code to display the variables from the n
 ```
 
 Walking through the code:
+
 - I output the selected animal using the @animal variable in the code '<%= @animal %>'
 - I create an image tag using the image_tag method. This allows you to display images from the assets/images directory.
 - I output the @credit variable using the 'sanitize' helper. This allows me to output the @credit variable as html while also sanitizing the value to be more secure.
