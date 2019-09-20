@@ -1,5 +1,5 @@
 ---
-title: "New controller action"
+title: "New Controller Action with Parameters and Variables"
 date: "2019-09-20T07:10:00+01:00"
 draft: false
 ---
