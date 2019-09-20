@@ -12,7 +12,7 @@ For this new action, I decided I wanted to explore using parameters. The goal wa
 
 First thing to do was to grab the images for the cat and dog. I went out to <a href="https://unsplash.com" target="_blank">unsplash</a> which offers a great selection of images to use for free. After downloading the images I wanted, I put them in the assets directory within the app:
 
-![image files](images/assetsimages.png)
+![image files](/images/assetsimages.png)
 
 Note that I did not add the two files with the :Zone.Identifier names. Rails created those files automatically when I ran the site. I only added the cat.jpg and dog.jpg files.
 
@@ -50,7 +50,7 @@ Pretty simple controller logic.
 
 Next thing to do was to create the view itself. This required creating a view called animals.html.erb in the views/home directory.
 
-![animal view](images/animalview.png)
+![animal view](/images/animalview.png)
 
 Within that view, I added the following code to display the variables from the new animal action in the home controller:
 
@@ -97,8 +97,8 @@ end
 
 To test it out I run the site and click on the dog and cat links to make sure they work correctly.
 
-![selecting an animal](images/animalhome1.png)
-![animal action view result](images/animalactionviewresult.png)
+![selecting an animal](/images/animalhome1.png)
+![animal action view result](/images/animalactionviewresult.png)
 
 Success! As you can see, the h2 tag has the specified animal name, the correct image is displayed, and the credit is output. Looking at the credit, it looks like the santize helper modified the html a bit. No big deal, but interesting to see what it did. 
 
@@ -142,8 +142,8 @@ I update index.html.erb to have two options of selecting animals, one with query
 
 And here is the result:
 
-![selecting an animal with route parameters](images/animalhome2.png)
-![animal action view result 2](images/animalactionviewresult2.png)
+![selecting an animal with route parameters](/images/animalhome2.png)
+![animal action view result 2](/images/animalactionviewresult2.png)
 
 Success! Looking at the URL, you can see it now looks like this after I click the dog link: '/home/animal/dog'. The /dog part of the URL is now the parameter. What I like about this solution is that I didn't need to modify my controller to get this functionality to work. The home controller has the same exact code as before when we were accessing the animal using the query string parameter. In fact, the query string links on the home page still work as well because the routing still supports the original URL route that we first added. So that means I can access the animal using '/home/animal/dog' or '/home/animal?animal=dog'. 😺🐶
 
