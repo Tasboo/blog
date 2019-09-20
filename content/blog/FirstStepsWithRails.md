@@ -66,7 +66,7 @@ I think this will be it for this post, but there are a few things I would like t
 1. How do I run tests? That new test file has me intrigued.
 2. How do I pass variables from my controller module down to the view I am trying to render?
 3. What is with all the files in the config/initializers directory? I am curious to see what I can do with each one of those files.
-4. How do I start using my postgresql database that I create when I set all this up?
+4. How do I start using my postgresql database that I created when I set all this up originally?
 
    
 Speaking of postgresql, I have a bit of tangent that I had to go down when I first started this post. When I started this post, it had been a while since I ran the app. When I first went to run the app, I got an exception with the message 'Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432'. To fix this, I found this stackoverflow post which lead me to use this command 'sudo pg_ctlcluster 11 main start'
