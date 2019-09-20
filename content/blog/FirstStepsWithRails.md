@@ -69,14 +69,14 @@ I think this will be it for this post, but there are a few things I would like t
 4. How do I start using my postgresql database that I created when I set all this up originally?
 
    
-Speaking of postgresql, I have a bit of tangent that I had to go down when I first started this post. When I started this post, it had been a while since I ran the app. When I first went to run the app, I got an exception with the message 'Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432'. To fix this, I found this stackoverflow post which lead me to use this command 'sudo pg_ctlcluster 11 main start'
+Speaking of postgresql, I have a bit of tangent that I had to go down when I first started this post. When I started this post, it had been a while since I ran the app. When I first went to run the app, I got an exception with the message 'Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432'. To fix this, [I found this stackexchange post](https://askubuntu.com/a/1013600) which lead me to use this command 'sudo pg_ctlcluster 11 main start'.
 
-1. not sure exactly what pg_ctlcluster does, but I assume it allows me to controll postgresql clusters?
+1. not sure exactly what pg_ctlcluster does, but I assume it allows me to control postgresql clusters?
 2. 11 corresponds to the version of postgres I am using
 3. main corresponds to the name of the cluster
 4. start corresponds to the action I want to do on the cluster. In this case, start it.
 
-To verify the version and cluster name, navigate to the etc/postgresql directory on your Linux instance. The first directry you see should be the version number and within the version number directory, you should see the cluster name directory.
+To verify the version and cluster name, navigate to the etc/postgresql directory on your Linux instance. The first directry you see should be the version number. Within the version number directory, you should see the cluster name directory.
 
 ```
 /etc/postgresql/11/main$ sudo pg_ctlcluster 11 main start
