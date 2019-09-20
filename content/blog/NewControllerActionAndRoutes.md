@@ -43,7 +43,7 @@ Lets walk through what I did:
 - 'def animal' defined a new action in my controller
 - '@animal = params[:animal]' assigned a variable named animal to the value of a parameter named animal.
 - the if/elsif statement determines what content to show on the page.
-  - just a note, for someone not used to Ruby development, using 'elsif' instead of 'elseif' (note missing 'e' in the first one) through me for a loop. It took me a few minutes to figure out that syntax 😝.
+  - just a note, for someone not used to Ruby development, using 'elsif' instead of 'elseif' (note missing 'e' in the first one) threw me for a loop. It took me a few minutes to figure out that syntax 😝.
 - In the if/elsif blocks, I assign 2 variables. First variable is the image file name I want to display. The second variable is an image credit to the unsplash site (not required for using these photos, but it seems like the right thing to do).
 
 Pretty simple controller logic. 
