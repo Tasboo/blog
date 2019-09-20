@@ -1,6 +1,6 @@
 ---
 title: "First Steps with Rails Development"
-date: "2019-20-09T07:02:00+01:00"
+date: "2019-09-20T07:02:00+01:00"
 draft: false
 ---
 
