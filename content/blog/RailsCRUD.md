@@ -48,3 +48,6 @@ I had reached the point in the Getting Started guide where we [display the newly
 ```
 
 [The url_for helper is listed in the Active Storage guide](https://edgeguides.rubyonrails.org/active_storage_overview.html#linking-to-files), but connecting that together in the show.html.erb file wasn't something I got right away for whatever reason.
+
+<h3>Updating an Image File</h3>
+This isn't really an issue, but I'd just like to point out how easy Rails can make things. I would have expected to have to do some extra leg work to get the image updating to work correctly, but I didn't have to do anything special. I just used the same conventions that I used for the other fields and I didn't have to handle the image file at all in the update controller method.
