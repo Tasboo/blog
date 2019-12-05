@@ -7,12 +7,12 @@ draft: false
 Woo, its been a few months since I've done anything with this. I started getting curious about Rails development again and decided to poke around at what other Rails developers are using in their apps. One item I came across was using decorators to manage presentation logic. 
 
 <h3>Draper</h3>
-The library I found was Draper. Draper allows you to add decorators to new and existing models pretty easily.
+The library I found was [Draper](https://github.com/drapergem/draper). Draper allows you to add decorators to new and existing models pretty easily.
 
 <h3>Installing Draper</h3>
 The concept of install Ruby gems is still pretty new to me. So it was a bit of a head scratcher on what exactly I needed to do. The installation instructions say to add Draper to your Gemfile. At this point as a complete Ruby and Rails noob, I have no clue what that means. I finally figured it out though.
 
-In directory of the rails app, there is a file called Gemfile. Within Gemfile, you can add different gems for your Ruby app to use. In my case, there were already a good amount of gems that were added automatically to the Gemfile from when I first setup the rails app. 
+In directory of the [CRUD rails app](/blog/RailsCRUD), there is a file called Gemfile. Within Gemfile, you can add different gems for your Ruby app to use. In my case, there were already a good amount of gems that were added automatically to the Gemfile from when I first setup the rails app. 
 
 <img src="/images/Gemfile.png" />
 
