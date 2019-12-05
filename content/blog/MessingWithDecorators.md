@@ -24,7 +24,7 @@ I hadn't had to open the Gemfile before, so doing this part was kind of new. Aft
 ```
   gem 'draper'
 ```
-3. In your terminal window, navigate to my rail's app directory and run the following command:
+3. In your terminal window, navigate to my rails app's directory and run the following command:
 ```
   bundle install
 ```
